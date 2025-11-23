@@ -1,0 +1,6 @@
+.env
+.gemini
+.venv
+__pycache__
+.streamlit
+
