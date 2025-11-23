@@ -1,0 +1,6 @@
+openai
+openai-agents
+pyarrow
+pypdf
+python-dotenv
+streamlit
