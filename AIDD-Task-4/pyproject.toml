@@ -3,7 +3,7 @@ name = "aidd-task-4"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
     "openai>=2.8.1",
     "openai-agents>=0.6.1",
