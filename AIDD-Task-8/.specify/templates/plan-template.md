@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+*   **Principle I (Minimalism):** Does the plan introduce any features beyond basic arithmetic (add, subtract, multiply, divide)?
+*   **Principle II (Clear API):** Is the proposed API simple, pure, and well-documented?
+*   **Principle III (TDD):** Does the plan include tasks for writing tests *before* implementation?
+*   **Principle IV (No Dependencies):** Does the plan introduce any third-party dependencies for core logic?
+*   **Principle V (Stateless):** Does the proposed design rely on or store any state between operations?
 
 ## Project Structure
 
