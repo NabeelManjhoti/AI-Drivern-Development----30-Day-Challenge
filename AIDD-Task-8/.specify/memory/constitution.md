@@ -1,55 +1,39 @@
-<!--
-Sync Impact Report:
-Version change:  → 0.1.0
-Modified principles:
-  - PRINCIPLE_1_NAME → Basic Operations Only
-  - PRINCIPLE_2_NAME → Clear Input/Output
-  - PRINCIPLE_3_NAME → Accuracy and Precision
-  - PRINCIPLE_4_NAME → Simplicity and Maintainability
-  - PRINCIPLE_5_NAME → Test Coverage
-Added sections: None
-Removed sections:
-  - [PRINCIPLE_6_NAME] and its description
-  - [SECTION_2_NAME] and its content
-  - [SECTION_3_NAME] and its content
-Templates requiring updates:
-  - .specify/templates/plan-template.md ⚠ pending
-  - .specify/templates/spec-template.md ⚠ pending
-  - .specify/templates/tasks-template.md ⚠ pending
-  - .gemini/commands/sp.adr.toml ⚠ pending
-  - .gemini/commands/sp.analyze.toml ⚠ pending
-  - .gemini/commands/sp.checklist.toml ⚠ pending
-  - .gemini/commands/sp.clarify.toml ⚠ pending
-  - .gemini/commands/sp.constitution.toml ⚠ pending
-  - .gemini/commands/sp.git.commit_pr.toml ⚠ pending
-  - .gemini/commands/sp.implement.toml ⚠ pending
-  - .gemini/commands/sp.phr.toml ⚠ pending
-  - .gemini/commands/sp.plan.toml ⚠ pending
-  - .gemini/commands/sp.specify.toml ⚠ pending
-  - .gemini/commands/sp.tasks.toml ⚠ pending
-Follow-up TODOs: None
--->
 # Simple Calculator Constitution
 
 ## Core Principles
 
-### I. Basic Operations Only
-The calculator must implement only basic arithmetic operations: addition, subtraction, multiplication, and division. No advanced functions (e.g., trigonometric, logarithmic, roots) are permitted.
+### Modularity
+Focus on clear, small, and reusable functions for each basic operation (add, subtract, multiply, divide). Each operation should be a self-contained unit.
 
-### II. Clear Input/Output
-The calculator must provide a clear and intuitive interface for inputting numbers and operations, and for displaying results. Error messages should be user-friendly and informative.
+### CLI-First
+The calculator will primarily be a command-line interface application. Input will be via arguments, and output to stdout.
 
-### III. Accuracy and Precision
-Results must be accurate for standard arithmetic operations, handling floating-point numbers with reasonable precision. Division by zero must be explicitly handled and reported as an error.
+### Test-Driven Development (TDD)
+All features and bug fixes must be accompanied by tests. The Red-Green-Refactor cycle is strictly enforced.
 
-### IV. Simplicity and Maintainability
-Codebase should be kept minimal and easy to understand. Favor clear, straightforward implementations over complex optimizations.
+### Accuracy
+Numerical precision for all calculations must be maintained. Edge cases like division by zero should be handled gracefully.
 
-### V. Test Coverage
-All core arithmetic functions and edge cases (e.g., division by zero, invalid input) must have comprehensive unit tests.
+### Simplicity
+Adhere to YAGNI (You Ain't Gonna Need It) principles. Only implement basic arithmetic operations (add, subtract, multiply, divide). Avoid unnecessary features.
+
+### Maintainability
+Code should be clean, readable, and well-documented to facilitate future updates and bug fixes.
+
+## Scope and Constraints
+
+**In Scope**: Addition, subtraction, multiplication, division of two numbers.
+**Out of Scope**: Advanced mathematical functions, scientific notation, GUI, chained operations, order of operations (PEMDAS).
+**Input**: Two numbers and a single operator.
+**Output**: Result of the operation or an error message.
+
+## Quality Assurance
+
+**Code Review**: All changes must pass code review by at least one other developer.
+**Testing**: Unit tests for each operation, integration tests for CLI interaction.
+**Error Handling**: Clear error messages for invalid input or operations (e.g., division by zero).
 
 ## Governance
+This Constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All Pull Requests and code reviews must verify compliance with these principles.
 
-Amendments to this constitution require review and approval by the project lead. All changes must be documented, including the rationale for the change.
-
-**Version**: 0.1.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-03
+**Version**: 1.0.0 | **Ratified**: 2025-12-03 | **Last Amended**: 2025-12-03
